@@ -1,101 +1,132 @@
-import Image from "next/image";
+import NavBar from "./components/NavBar";
+import FlexLayout from "./components/ui/FlexLayout";
+import { Heading1, Heading2, Paragraph } from "./components/ui/Text";
+import Button from "./components/ui/Button";
+import Image from "./components/ui/Image";
+import { IconCardProps, TechStackProps } from "@/types";
+import IconCard from "./components/IconCard";
+import OurStackCard from "./components/OurStackCard";
+import { projects } from "@/utils/constants";
+import ShowOffCard from "./components/ShowOffCard";
+
+const homeIconCards: IconCardProps[] = [
+  {
+    heading: "Website Development",
+    description: "Beautiful, fast and branded websites",
+    icon: "/websiteIcon.svg",
+  },
+  {
+    heading: "Mobile App Development",
+    description: "Modern android and iphone  apps",
+    icon: "/mobileApp.svg",
+  },
+  {
+    heading: "Backend and Cloud Development",
+    description: "Robust, Secure and optimized",
+    icon: "/serverIcon.svg",
+  },
+];
+
+const techStacks: TechStackProps[] = [
+  {
+    image: "/react.png",
+    title: "React Js",
+  },
+  {
+    image: "/atom.png",
+    title: "React Native",
+  },
+  {
+    image: "/wordpress.png",
+    title: "Wordpress",
+  },
+  {
+    image: "/nextjs.png",
+    title: "Next Js",
+  },
+  {
+    image: "/node-js.png",
+    title: "Node Js",
+  },
+  {
+    image: "/aws.png",
+    title: "AWS",
+  },
+  {
+    image: "/firebase.png",
+    title: "Firebase",
+  },
+  {
+    image: "/sql.png",
+    title: "Databases",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+    <div className="w-screen min-h-screen bg-darkBlue">
+      <NavBar />
+      <FlexLayout
+        direction={"row-large-only"}
+        container
+        className="py-10 items-center "
+      >
+        <FlexLayout direction="column-always" className="flex-1/2 gap-9">
+          <Heading2 color="purple">Sea Rocket Tech</Heading2>
+          <div>
+            <Heading1>Make more money</Heading1>
+            <Heading1>With Technology</Heading1>
+          </div>
+          <Paragraph className="leading-9">
+            Building websites and phone apps that amazes your customers. We give
+            your contacts a beautiful experience when interacting with your
+            business online
+          </Paragraph>
+          <FlexLayout className=" items-center w-full">
+            <Button>View Pricing</Button>
+          </FlexLayout>
+        </FlexLayout>
+        <FlexLayout className="flex-1/2 items-center justify-center">
+          <div className="max-w-[500] max-h-[500]">
+            <Image src={"/heroImg.png"} width={500} height={500} />
+          </div>
+        </FlexLayout>
+      </FlexLayout>
+      <FlexLayout container className=" justify-between items-center gap-2">
+        {homeIconCards.map((item) => (
+          <div key={item.heading} className="flex-1/3">
+            <IconCard info={item} />
+          </div>
+        ))}
+      </FlexLayout>
+      <Heading2 alignment="center" className="py-[100px]">
+        Our Tech Stack
+      </Heading2>
+      <FlexLayout
+        direction="row-always"
+        className=" justify-between items-center px-4"
+      >
+        {techStacks.map((item) => (
+          <OurStackCard key={item.title} info={item} />
+        ))}
+      </FlexLayout>
+      <Heading2 alignment="center" className="py-[100px]">
+        Some projects we have completed
+      </Heading2>
+      <FlexLayout
+        direction="column-always"
+        container
+        className=" gap-4 bg-[url(/background-lines.png)] bg-repeat"
+      >
+        {projects.map((item, index) => (
+          <ShowOffCard
+            key={item.title}
+            info={item}
+            buttonText="View App"
+            reversed={index % 2 == 1}
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        ))}
+      </FlexLayout>
     </div>
   );
 }
