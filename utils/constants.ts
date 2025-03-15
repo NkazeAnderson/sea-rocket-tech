@@ -1,4 +1,4 @@
-import { NavLinkProps, showOffCardProps } from "@/types";
+import { NavLinkProps, reviewT, showOffCardProps, TeamMemberCardT } from "@/types";
 
 export const navLinks:NavLinkProps[] = [{
     text:"Home",
@@ -18,6 +18,21 @@ export const navLinks:NavLinkProps[] = [{
 }
 ]
 
+export const demoReviews:reviewT[] = [
+    {
+    image:"/facePicture.jpg",
+    message:"Lorem ipsum is a dummy  or placeholder text commonly used in graphic design, publishing, and web development to fill empty spaces in a layout that does not yet have  content."
+},
+    {
+    image:"/facePicture.jpg",
+    message:"Lorem ipsum is a dummy  or placeholder text commonly used in graphic design, publishing, and web development to fill empty spaces in a layout that does not yet have  content."
+},
+    {
+    image:"/facePicture.jpg",
+    message:"Lorem ipsum is a dummy  or placeholder text commonly used in graphic design, publishing, and web development to fill empty spaces in a layout that does not yet have  content."
+},
+]
+
 export const projects : showOffCardProps[] = [
 {
     title: "ChopAsap",
@@ -29,4 +44,22 @@ export const projects : showOffCardProps[] = [
     description: "A food cater mobile application which enables users to order food from store",
     image: "/chopasapProduct.png",
 },
+]
+
+export const demoTeamMembers:TeamMemberCardT[] = [
+    {
+        image: "/facePicture.jpg",
+        name: "Nkaze Anderson",
+        role:"Web Developer"
+    },
+    {
+        image: "/facePicture.jpg",
+        name: "Nkaze Anderson",
+        role:"Web Developer"
+    },
+    {
+        image: "/facePicture.jpg",
+        name: "Nkaze Anderson",
+        role:"Web Developer"
+    },
 ]

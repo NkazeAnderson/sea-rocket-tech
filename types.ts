@@ -18,3 +18,12 @@ export interface showOffCardProps {
     title: string;
     description: string;
   }
+  export interface TeamMemberCardT {
+    image: string;
+    name: string;
+    role: string;
+  }
+  export interface reviewT {
+    image:string,
+    message:string
+  }

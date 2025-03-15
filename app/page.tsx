@@ -6,8 +6,11 @@ import Image from "./components/ui/Image";
 import { IconCardProps, TechStackProps } from "@/types";
 import IconCard from "./components/IconCard";
 import OurStackCard from "./components/OurStackCard";
-import { projects } from "@/utils/constants";
+import { demoReviews, demoTeamMembers, projects } from "@/utils/constants";
 import ShowOffCard from "./components/ShowOffCard";
+import TeamMemberCard from "./components/TeamMemberCard";
+import ReviewCard from "./components/ReviewCard";
+import Footer from "./components/Footer";
 
 const homeIconCards: IconCardProps[] = [
   {
@@ -127,6 +130,48 @@ export default function Home() {
           />
         ))}
       </FlexLayout>
+
+      <FlexLayout
+        container
+        direction="row-always"
+        className="gap-2.5 justify-center"
+      >
+        <Heading2 alignment="center" className="py-[100px]">
+          Meet <span className=" line-through">Us</span>:
+        </Heading2>
+        <Heading2 alignment="center" className="py-[100px]">
+          The Team
+        </Heading2>
+      </FlexLayout>
+
+      <FlexLayout
+        direction="row-large-only"
+        container
+        className="justify-center gap-4"
+      >
+        {/* max 3 */}
+        {demoTeamMembers.map((item, i) => (
+          <div key={`${item.role} - ${i}`}>
+            <TeamMemberCard member={item} />
+          </div>
+        ))}
+      </FlexLayout>
+      <Heading2 alignment="center" className="py-[100px]">
+        What our clients say about us
+      </Heading2>
+
+      <FlexLayout
+        direction="row-large-only"
+        container
+        className="gap-12 items-center justify-center"
+      >
+        {demoReviews.map((item, i) => (
+          <div key={i} className=" ">
+            <ReviewCard review={item} />
+          </div>
+        ))}
+      </FlexLayout>
+      <Footer />
     </div>
   );
 }
