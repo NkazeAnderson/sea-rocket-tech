@@ -14,7 +14,7 @@ function NavLinks(props: NavLinkProps) {
       <Paragraph
         color={isActive ? "purple" : "white"}
         color-hover="purple"
-        className=" capitalize font-bold"
+        className=" capitalize font-semibold"
       >
         {props.text}
       </Paragraph>

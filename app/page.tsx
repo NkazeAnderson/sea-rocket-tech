@@ -1,4 +1,3 @@
-import NavBar from "./components/NavBar";
 import FlexLayout from "./components/ui/FlexLayout";
 import { Heading1, Heading2, Paragraph } from "./components/ui/Text";
 import Button from "./components/ui/Button";
@@ -10,7 +9,6 @@ import { demoReviews, demoTeamMembers, projects } from "@/utils/constants";
 import ShowOffCard from "./components/ShowOffCard";
 import TeamMemberCard from "./components/TeamMemberCard";
 import ReviewCard from "./components/ReviewCard";
-import Footer from "./components/Footer";
 
 const homeIconCards: IconCardProps[] = [
   {
@@ -67,8 +65,7 @@ const techStacks: TechStackProps[] = [
 
 export default function Home() {
   return (
-    <div className="w-screen min-h-screen bg-darkBlue">
-      <NavBar />
+    <>
       <FlexLayout
         direction={"row-large-only"}
         container
@@ -171,7 +168,6 @@ export default function Home() {
           </div>
         ))}
       </FlexLayout>
-      <Footer />
-    </div>
+    </>
   );
 }

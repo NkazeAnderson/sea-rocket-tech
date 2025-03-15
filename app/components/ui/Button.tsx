@@ -5,7 +5,7 @@ import { tv, VariantProps } from "tailwind-variants";
 import { Paragraph } from "./Text";
 
 const buttonClasses = tv({
-  base: "px-6 py-4 rounded-2xl bg-purple hover:bg-blue text-white text-16 font-bold hover:cursor-pointer",
+  base: "px-6 py-4 rounded-2xl bg-purple hover:bg-blue text-white text-16 font-semibold hover:cursor-pointer",
   variants: {
     fullWidth: {
       true: "w-full",
