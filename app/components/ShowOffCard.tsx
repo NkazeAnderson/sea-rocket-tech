@@ -9,16 +9,20 @@ function ShowOffCard({
   info,
   buttonText,
   reversed,
+  purple,
 }: {
   info: showOffCardProps;
   buttonText: string;
   reversed?: boolean;
+  purple?: boolean;
 }) {
   return (
     <FlexLayout
-      className={`items-center py-9 px-4 rounded-2xl bg-black/60 gap-6 ${
-        reversed ? "flex-row-reverse" : "flex-row"
-      }`}
+      className={`items-center py-9 px-4 rounded-2xl ${
+        purple
+          ? "bg-gradient-to-r from-[#4B3CFF]/60 to-[#4B3CFF]"
+          : "bg-black/60"
+      } gap-6 ${reversed ? "flex-row-reverse" : "flex-row"}`}
     >
       <FlexLayout className=" flex-1/2">
         <div className="max-w-[500px]">

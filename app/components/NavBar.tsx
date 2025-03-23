@@ -8,7 +8,7 @@ import Logo from "./Logo";
 
 function NavBar() {
   return (
-    <FlexLayout className="justify-between gap-2 px-12 py-4 items-center sticky top-0 w-screen bg-linear-to-b from-darkBlue to-darkBlue/80 from-60% ">
+    <FlexLayout className="justify-between gap-2 px-12 py-4 items-center sticky top-0 w-screen bg-linear-to-b from-darkBlue to-darkBlue/80 from-60% z-50">
       <Logo />
 
       <FlexLayout direction="row-large-only" className=" gap-6 items-center">
