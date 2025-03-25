@@ -6,7 +6,7 @@ function TeamMemberCard({ member }: { member: TeamMemberCardT }) {
   return (
     <div>
       <div className="aspect-video">
-        <Image src={member.image} width={400} height={400} />
+        <Image src={member.image} width={400} height={400} alt="team member" />
       </div>
       <div className="text-white text-center">
         <p className="font-bold">{member.name}</p>

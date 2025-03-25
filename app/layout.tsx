@@ -6,11 +6,13 @@ import Footer from "./components/Footer";
 
 const inter = Inter({
   weight: ["400", "700", "600", "300"],
+  subsets: ["latin"],
   variable: "--font-inter",
 });
 
 const poppins = Poppins({
   weight: ["400", "700", "600", "300"],
+  subsets: ["latin"],
   variable: "--font-poppins",
 });
 

@@ -3,7 +3,6 @@ import ShowOffCard from "../components/ShowOffCard";
 import FlexLayout from "../components/ui/FlexLayout";
 import PageHeader from "../components/PageHeader";
 import { projects } from "@/utils/constants";
-import FilterButton from "../components/FilterButton";
 import FilterButtons from "./FilterButtons";
 
 function ProjectPage() {

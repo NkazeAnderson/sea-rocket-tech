@@ -16,9 +16,7 @@ const buttonClasses = tv({
   },
 });
 
-interface buttonClassesI extends VariantProps<typeof buttonClasses> {}
-
-interface ButtonProps extends buttonClassesI {
+interface ButtonProps extends VariantProps<typeof buttonClasses> {
   children: React.ReactNode;
   onClick?: VoidFunction;
 }

@@ -26,7 +26,7 @@ function ShowOffCard({
     >
       <FlexLayout className=" flex-1/2">
         <div className="max-w-[500px]">
-          <Image src={info.image} width={500} height={400} />
+          <Image src={info.image} width={500} height={400} alt="projectimage" />
         </div>
       </FlexLayout>
       <FlexLayout direction="column-always" className=" flex-1/2 gap-4">

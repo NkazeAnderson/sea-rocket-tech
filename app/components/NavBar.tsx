@@ -1,6 +1,5 @@
 import React from "react";
 import FlexLayout from "./ui/FlexLayout";
-import Image from "./ui/Image";
 import { navLinks } from "@/utils/constants";
 import NavLinks from "./NavLinks";
 import Button from "./ui/Button";

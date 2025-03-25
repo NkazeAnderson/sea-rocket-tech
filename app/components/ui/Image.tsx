@@ -20,6 +20,7 @@ interface ImageProps extends VariantProps<typeof imageclasses> {
   src: string;
   width: number;
   height: number;
+  alt?: string;
 }
 function Image(props: ImageProps) {
   return (
@@ -28,7 +29,7 @@ function Image(props: ImageProps) {
       src={props.src}
       width={props.width}
       height={props.height}
-      alt=""
+      alt={props.alt ?? "image"}
     />
   );
 }

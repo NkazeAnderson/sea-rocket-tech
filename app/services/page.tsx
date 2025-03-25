@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading1, Heading2, Heading3 } from "../components/ui/Text";
+import { Heading2, Heading3 } from "../components/ui/Text";
 import { showOffCardProps } from "@/types";
 import ShowOffCard from "../components/ShowOffCard";
 import FlexLayout from "../components/ui/FlexLayout";

@@ -8,7 +8,7 @@ function IconCard({ info }: { info: IconCardProps }) {
   return (
     <FlexLayout direction="row-always" className="gap-2">
       <FlexLayout className="size-20 bg-gray/60 border-purple stroke-purple border-2 rounded-full p-4">
-        <Image src={info.icon} width={80} height={80} />
+        <Image src={info.icon} width={80} height={80} alt="icon" />
       </FlexLayout>
       <FlexLayout direction="column-always" className="gap-2 justify-center">
         <Paragraph color="purple" className="font-bold">

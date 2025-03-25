@@ -27,9 +27,7 @@ const textClasses = tv({
   },
 });
 
-interface textClassesI extends VariantProps<typeof textClasses> {}
-
-interface TextProps extends textClassesI {
+interface TextProps extends VariantProps<typeof textClasses> {
   children: React.ReactNode;
   className?: string;
 }

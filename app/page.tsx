@@ -88,7 +88,12 @@ export default function Home() {
         </FlexLayout>
         <FlexLayout className="flex-1/2 items-center justify-center">
           <div className="max-w-[500] max-h-[500]">
-            <Image src={"/heroImg.png"} width={500} height={500} />
+            <Image
+              src={"/heroImg.png"}
+              width={500}
+              height={500}
+              alt="heroimage"
+            />
           </div>
         </FlexLayout>
       </FlexLayout>

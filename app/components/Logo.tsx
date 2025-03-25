@@ -1,11 +1,12 @@
 import Link from "next/link";
 import React from "react";
+import Image from "./ui/Image";
 
 function Logo() {
   return (
     <Link href={"/"}>
       <div className="size-[100px]">
-        <img src={"/sea-rocket-tech.png"} />
+        <Image src={"/sea-rocket-tech.png"} width={100} height={100} alt="" />
       </div>
     </Link>
   );
