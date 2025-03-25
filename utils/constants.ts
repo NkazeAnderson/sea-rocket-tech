@@ -14,7 +14,7 @@ export const navLinks:NavLinkProps[] = [{
 },
 {
     text:"contact us",
-    href:"/contact us",
+    href:"/contact-us",
 }
 ]
 
