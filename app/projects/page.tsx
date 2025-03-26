@@ -9,10 +9,10 @@ function ProjectPage() {
   return (
     <>
       <PageHeader title="Projects" />
-      <div className="py-6 border-b-2 border-purple  px-[50px]">
+      <div className="py-6 border-b-2 border-purple px-4  lg:px-[50px] overflow-scroll">
         <FilterButtons />
       </div>
-      <div className="p-[50px]">
+      <div className="py-[50px]">
         <FlexLayout
           direction="column-always"
           container

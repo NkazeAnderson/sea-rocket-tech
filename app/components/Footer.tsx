@@ -10,7 +10,7 @@ function Footer() {
     <footer className="mt-10">
       <FlexLayout
         direction="row-large-only"
-        className="px-7 py-10 bg-black justify-between items-center text-white"
+        className=" px-7 py-10 bg-black justify-between gap-5 lg:gap-1 lg:items-center text-white"
       >
         <div>
           <Logo />
@@ -44,7 +44,7 @@ function Footer() {
             <Link href={"https:googlemaps.com"}> Washington, USA</Link>
           </p>
         </FlexLayout>
-        <small>Sea Rocket Tech © 2025</small>
+        <small className="text-center">Sea Rocket Tech © 2025</small>
       </FlexLayout>
     </footer>
   );

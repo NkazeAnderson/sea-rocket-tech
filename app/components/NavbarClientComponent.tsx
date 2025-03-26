@@ -12,10 +12,9 @@ function NavbarClientComponent({ children }: PropsWithChildren) {
   const { mobileNavIsOpen } = useContext(AppContext) as AppContextType;
   return (
     <nav className="sticky top-0 ">
-      {children}
-      <div>
+      <>
         {mobileNavIsOpen && (
-          <div className="absolute top-0 w-full h-screen bg-darkBlue/70 flex flex-col z-0">
+          <div className="absolute top-[80%] w-full h-screen bg-darkBlue/70 flex flex-col z-0">
             <FlexLayout
               direction="column-always"
               className=" gap-6 items-center   px-2  bg-darkBlue py-[15vh]"
@@ -35,7 +34,8 @@ function NavbarClientComponent({ children }: PropsWithChildren) {
             </div>
           </div>
         )}
-      </div>
+      </>
+      {children}
     </nav>
   );
 }

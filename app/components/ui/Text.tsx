@@ -35,9 +35,9 @@ interface TextProps extends VariantProps<typeof textClasses> {
 export function Heading1(props: TextProps) {
   return (
     <h1
-      className={`font-poppins font-bold text-64 ${textClasses(props)} ${
-        props.className && props.className
-      }`}
+      className={`font-poppins font-bold text-36 lg:text-64 ${textClasses(
+        props
+      )} ${props.className && props.className}`}
     >
       {props.children}
     </h1>
@@ -47,9 +47,9 @@ export function Heading1(props: TextProps) {
 export function Heading2(props: TextProps) {
   return (
     <h2
-      className={`font-poppins font-bold text-36 ${textClasses(props)} ${
-        props.className && props.className
-      }`}
+      className={`font-poppins font-bold text-24 lg:text-36 ${textClasses(
+        props
+      )} ${props.className && props.className}`}
     >
       {props.children}
     </h2>
@@ -59,9 +59,9 @@ export function Heading2(props: TextProps) {
 export function Heading3(props: TextProps) {
   return (
     <h3
-      className={`font-poppins font-bold text-24 ${textClasses(props)} ${
-        props.className && props.className
-      }`}
+      className={`font-poppins font-bold text-xl lg:text-24 ${textClasses(
+        props
+      )} ${props.className && props.className}`}
     >
       {props.children}
     </h3>
@@ -71,7 +71,7 @@ export function Heading3(props: TextProps) {
 export function Paragraph(props: TextProps) {
   return (
     <p
-      className={`font-poppins text-16 ${textClasses(props)} ${
+      className={`font-poppins text-[14px] lg:text-16 ${textClasses(props)} ${
         props.className && props.className
       }`}
     >

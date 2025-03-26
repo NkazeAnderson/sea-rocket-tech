@@ -88,8 +88,8 @@ function ServicesPage() {
   return (
     <>
       <PageHeader title="Services" />
-      <div className="px-[50px]">
-        <p className="text-center px-[30%] py-12 text-base leading-9">
+      <div className="px-4 lg:px-[50px]">
+        <p className="text-center px-[10%] lg:px-[30%] py-12 text-base leading-9">
           Sea Rocket Tech is a group of highly skilled and experienced
           developers helping businesses and individuals in getting and
           satisfying more clients from the sea of infinite internet users. We
@@ -110,7 +110,7 @@ function ServicesPage() {
           <div className="pt-24 pb-10">
             <Heading2 alignment="center">Why Choose Us?</Heading2>
           </div>
-          <div className="grid grid-cols-3 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-16">
             {reasonsToChooseUs.map((item) => (
               <BadgeCard key={item.title} reason={item} />
             ))}
@@ -118,7 +118,7 @@ function ServicesPage() {
         </section>
         <section className=" py-16 flex items-center justify-center">
           <FlexLayout direction="row-always" className="items-center">
-            <div className="w-[150px] relative left-[80]">
+            <div className="w-[160px] relative left-[20px] lg:left-[80]">
               <Button>Contact Us</Button>
             </div>
             <div>
@@ -129,7 +129,7 @@ function ServicesPage() {
                 alt="curly arrow"
               />
             </div>
-            <div className="flex flex-col gap-10 relative right-5">
+            <div className="flex flex-col gap-10 relative right-2 lg:right-5">
               <p className="font-bold">Hi there! Try us out</p>
               <p>Give us the opportunity to serve you</p>
             </div>

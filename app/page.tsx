@@ -71,7 +71,10 @@ export default function Home() {
         container
         className="py-10 items-center "
       >
-        <FlexLayout direction="column-always" className="flex-1/2 gap-9">
+        <FlexLayout
+          direction="column-always"
+          className="flex-1/2 gap-3 lg:gap-9"
+        >
           <Heading2 color="purple">Sea Rocket Tech</Heading2>
           <div>
             <Heading1>Make more money</Heading1>
@@ -97,19 +100,26 @@ export default function Home() {
           </div>
         </FlexLayout>
       </FlexLayout>
-      <FlexLayout container className=" justify-between items-center gap-2">
+
+      <FlexLayout
+        direction="row-large-only"
+        container
+        className=" justify-between items-center gap-6 "
+      >
         {homeIconCards.map((item) => (
-          <div key={item.heading} className="flex-1/3">
+          <div key={item.heading} className="flex-1 lg:flex-1/3">
             <IconCard info={item} />
           </div>
         ))}
       </FlexLayout>
+
       <Heading2 alignment="center" className="py-[100px]">
         Our Tech Stack
       </Heading2>
       <FlexLayout
         direction="row-always"
-        className=" justify-between items-center px-4"
+        container
+        className=" w-screen justify-between items-center gap-y-5 gap-x-3 lg:gap-0.5  !flex-wrap"
       >
         {techStacks.map((item) => (
           <OurStackCard key={item.title} info={item} />

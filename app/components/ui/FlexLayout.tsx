@@ -10,7 +10,7 @@ const layoutClasses = tv({
       "column-always": "flex-col",
     },
     container: {
-      true: " px-12",
+      true: "px-4 lg:px-12",
     },
   },
 });

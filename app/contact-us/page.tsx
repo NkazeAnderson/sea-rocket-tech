@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading2, Heading3 } from "../components/ui/Text";
+import { Heading2 } from "../components/ui/Text";
 import FlexLayout from "../components/ui/FlexLayout";
 import PageHeader from "../components/PageHeader";
 import Link from "next/link";
@@ -11,12 +11,12 @@ function ContactUsPage() {
   return (
     <>
       <PageHeader title="Contact Us" />
-      <div className="px-[50px]">
-        <p className="text-center px-[30%] py-12 text-base leading-9">
+      <div className="px-4 lg:px-[50px]">
+        <p className="text-center px-[15%] lg:px-[30%] py-12 text-base leading-9">
           We are available 24/7 for all of your inquires. Contact us for a free
           professional consultation about your online pressence.
         </p>
-        <FlexLayout direction="row-large-only">
+        <FlexLayout direction="row-large-only" className="gap-10 lg:gap-0">
           <div className="basis-1/2">
             <Heading2>Direct Contact Links</Heading2>
 
