@@ -3,6 +3,7 @@ import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import AppContextProvider from "./components/context.tsx/AppContextProvider";
 
 const inter = Inter({
   weight: ["400", "700", "600", "300"],
@@ -30,13 +31,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${poppins.variable} antialiased overflow-x-hidden`}
+        className={`${inter.variable} ${poppins.variable} antialiased overflow-hidden `}
       >
-        <div className="w-screen min-h-screen bg-darkBlue relative">
-          <NavBar />
+        <div className="w-screen h-screen bg-darkBlue relative overflow-x-hidden overflow-y-auto">
+          <AppContextProvider>
+            <NavBar />
 
-          {children}
-          <Footer />
+            {children}
+            <Footer />
+          </AppContextProvider>
         </div>
       </body>
     </html>

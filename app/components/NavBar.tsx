@@ -4,21 +4,30 @@ import { navLinks } from "@/utils/constants";
 import NavLinks from "./NavLinks";
 import Button from "./ui/Button";
 import Logo from "./Logo";
+import MobileNavigation from "./MobileNavigation";
+import NavbarClientComponent from "./NavbarClientComponent";
 
 function NavBar() {
   return (
-    <FlexLayout className="justify-between gap-2 px-12 py-4 items-center sticky top-0 w-screen bg-linear-to-b from-darkBlue to-darkBlue/80 from-60% z-50">
-      <Logo />
+    <NavbarClientComponent>
+      <FlexLayout className="justify-between gap-2 px-4 lg:px-12 py-4 items-center w-screen bg-linear-to-b from-darkBlue to-darkBlue/80 from-60% z-50">
+        <Logo />
 
-      <FlexLayout direction="row-large-only" className=" gap-6 items-center">
-        {navLinks.map((item) => (
-          <NavLinks key={item.text} {...item} />
-        ))}
+        <div className="hidden lg:block ">
+          <FlexLayout direction="row-always" className=" gap-6 items-center ">
+            {navLinks.map((item) => (
+              <NavLinks key={item.text} {...item} />
+            ))}
+          </FlexLayout>
+        </div>
+        <div className="hidden lg:block">
+          <Button>Login</Button>
+        </div>
+        <div className="lg:hidden block">
+          <MobileNavigation />
+        </div>
       </FlexLayout>
-      <div>
-        <Button>Login</Button>
-      </div>
-    </FlexLayout>
+    </NavbarClientComponent>
   );
 }
 
