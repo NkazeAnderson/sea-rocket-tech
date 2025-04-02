@@ -6,6 +6,7 @@ import Button from "./ui/Button";
 import Logo from "./Logo";
 import MobileNavigation from "./MobileNavigation";
 import NavbarClientComponent from "./NavbarClientComponent";
+import Link from "next/link";
 
 function NavBar() {
   return (
@@ -21,7 +22,9 @@ function NavBar() {
           </FlexLayout>
         </div>
         <div className="hidden lg:block">
-          <Button>Login</Button>
+          <Link href={"/auth/login"}>
+            <Button>Login</Button>
+          </Link>
         </div>
         <div className="lg:hidden block">
           <MobileNavigation />
