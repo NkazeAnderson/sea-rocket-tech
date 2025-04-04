@@ -96,18 +96,18 @@ const services: showOffCardProps[] = [
     title: "UI/UX Design",
     description:
       "We design websites and app which resonate your business brand. We ensure your users get a modern experience when interacting with your business.t",
-    image: "/kindpng_3348267.png",
+    image: "/ui-ux.png",
     link:
       "	https://wa.me/237683403750?" +
       new URLSearchParams({
-        text: "Hi, I am interested in need of a UI Design for my app.",
+        text: "Hi, I am interested in a UI Design for my app.",
       }).toString(),
   },
   {
     title: "Search Engine Optimization - SEO",
     description:
       "We do both onsite and offsite search engine optimization of your websites, making it ranking higher and recommended on google and other engines",
-    image: "/kindpng_3348267.png",
+    image: "/seo.png",
     link:
       "	https://wa.me/237683403750?" +
       new URLSearchParams({
@@ -118,7 +118,7 @@ const services: showOffCardProps[] = [
     title: "Tech Consultation",
     description:
       "We provide you with tech insights gained after years of experience in the industry. We will provide a detailed road map to achieving success in tech.",
-    image: "/kindpng_3348267.png",
+    image: "/consultation.png",
     link:
       "	https://wa.me/237683403750?" +
       new URLSearchParams({
@@ -159,9 +159,9 @@ function ServicesPage() {
             ))}
           </div>
         </section>
-        <section className=" py-16 flex items-center justify-center">
-          <FlexLayout direction="row-always" className="items-center">
-            <div className="w-[160px] relative left-[20px] lg:left-[80]">
+        <section className=" py-16 flex items-center justify-center !z-0">
+          <div className="items-center flex flex-row">
+            <div className="w-[160px] left-[20px] lg:left-[80] !z-0">
               <Link href={"/contact-us"}>
                 <Button>Contact Us</Button>
               </Link>
@@ -174,11 +174,11 @@ function ServicesPage() {
                 alt="curly arrow"
               />
             </div>
-            <div className="flex flex-col gap-10 relative right-2 lg:right-5">
+            <div className="flex flex-col gap-10  right-2 lg:right-5 !z-0">
               <p className="font-bold">Hi there! Try us out</p>
               <p>Give us the opportunity to serve you</p>
             </div>
-          </FlexLayout>
+          </div>
         </section>
       </div>
     </>

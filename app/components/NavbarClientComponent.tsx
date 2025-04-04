@@ -13,7 +13,7 @@ import Button from "./ui/Button";
 function NavbarClientComponent({ children }: PropsWithChildren) {
   const { mobileNavIsOpen } = useContext(AppContext) as AppContextType;
   return (
-    <nav className="sticky top-0 ">
+    <nav className="sticky top-0 !z-50">
       <>
         {mobileNavIsOpen && (
           <div className="absolute top-[80%] w-full h-screen bg-darkBlue/70 flex flex-col z-0">

@@ -11,7 +11,7 @@ import Link from "next/link";
 function NavBar() {
   return (
     <NavbarClientComponent>
-      <FlexLayout className="justify-between gap-2 px-4 lg:px-12 py-4 items-center w-screen bg-linear-to-b from-darkBlue to-darkBlue/80 from-60% z-50">
+      <FlexLayout className="justify-between gap-2 px-4 lg:px-12 py-4 items-center w-screen bg-linear-to-b from-darkBlue to-darkBlue/80 from-60% !z-50">
         <Logo />
 
         <div className="hidden lg:block ">
