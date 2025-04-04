@@ -3,7 +3,7 @@ import FlexLayout from "./ui/FlexLayout";
 import Logo from "./Logo";
 import { Heading3 } from "./ui/Text";
 import Link from "next/link";
-import { navLinks } from "@/utils/constants";
+import { companyInformation, navLinks } from "@/utils/constants";
 
 function Footer() {
   return (
@@ -25,24 +25,30 @@ function Footer() {
         </FlexLayout>
         <FlexLayout direction="column-always" className="gap-3">
           <Heading3>Contacts</Heading3>
-          <p>
-            <b>Phone:</b>{" "}
-            <Link className="underline" href={"tel:567 6768877"}>
-              {" "}
-              +1 787 8887 7787
-            </Link>
-          </p>
-          <p>
-            <b>Email:</b>{" "}
-            <Link className="underline" href={"mailto:info@searockettech.com"}>
-              {" "}
-              info@searockettech.com
-            </Link>
-          </p>
-          <p>
-            <b>Address:</b>{" "}
-            <Link href={"https:googlemaps.com"}> Washington, USA</Link>
-          </p>
+          {companyInformation.map((item) => (
+            <FlexLayout
+              key={item.info}
+              direction="row-always"
+              className="py-2 gap-2 items-center"
+            >
+              <p className=" capitalize">{item.name}:</p>
+              <Link
+                className={`text-white ${
+                  (item.type === "email" || item.type === "phone") &&
+                  "underline"
+                }`}
+                href={
+                  item.type === "phone"
+                    ? `tel:${item.info}`
+                    : item.type === "email"
+                    ? `mailto:${item.info}`
+                    : "https://googlemaps.com"
+                }
+              >
+                {item.info}
+              </Link>
+            </FlexLayout>
+          ))}
         </FlexLayout>
         <small className="text-center">Sea Rocket Tech © 2025</small>
       </FlexLayout>

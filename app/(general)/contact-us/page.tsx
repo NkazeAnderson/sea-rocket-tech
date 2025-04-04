@@ -6,6 +6,7 @@ import Link from "next/link";
 import { FaLocationArrow, FaPhone } from "react-icons/fa";
 import { HiMailOpen } from "react-icons/hi";
 import Button from "../../components/ui/Button";
+import { companyInformation } from "@/utils/constants";
 
 function ContactUsPage() {
   return (
@@ -19,49 +20,34 @@ function ContactUsPage() {
         <FlexLayout direction="row-large-only" className="gap-10 lg:gap-0">
           <div className="basis-1/2">
             <Heading2>Direct Contact Links</Heading2>
-
-            <FlexLayout
-              direction="row-always"
-              className="py-2 gap-2 items-center"
-            >
-              <FaPhone className="size-6 inline-block rotate-180" />{" "}
-              <p>Phone:</p>
-              <Link className="text-blue" href={"tel:567 6768877"}>
-                +1 787 8887 7787
-              </Link>
-            </FlexLayout>
-            <FlexLayout
-              direction="row-always"
-              className="py-2 gap-2 items-center"
-            >
-              <HiMailOpen className="size-6 inline-block" /> <p>Email:</p>
-              <Link
-                className="text-blue"
-                href={"mailto:nkazeanderson@gmail.com"}
+            {companyInformation.map((item) => (
+              <FlexLayout
+                key={item.info}
+                direction="row-always"
+                className="py-2 gap-2 items-center"
               >
-                info@searockettech.com
-              </Link>
-            </FlexLayout>
-            <FlexLayout
-              direction="row-always"
-              className="py-2 gap-2 items-center"
-            >
-              <FaLocationArrow className="size-6 inline-block" />{" "}
-              <p>Address 1:</p>
-              <Link className="text-blue" href={"https://googlemaps.com"}>
-                Washington, USA
-              </Link>
-            </FlexLayout>
-            <FlexLayout
-              direction="row-always"
-              className="py-2 gap-2 items-center"
-            >
-              <FaLocationArrow className="size-6 inline-block" />{" "}
-              <p>Address 2:</p>
-              <Link className="text-blue" href={"https://googlemaps.com"}>
-                Douala, Cameroon
-              </Link>
-            </FlexLayout>
+                {item.type === "phone" ? (
+                  <FaPhone className="size-6 inline-block rotate-180" />
+                ) : item.type === "email" ? (
+                  <HiMailOpen className="size-6 inline-block" />
+                ) : (
+                  <FaLocationArrow className="size-6 inline-block" />
+                )}
+                <p className=" capitalize">{item.name}:</p>
+                <Link
+                  className="text-blue"
+                  href={
+                    item.type === "phone"
+                      ? `tel:${item.info}`
+                      : item.type === "email"
+                      ? `mailto:${item.info}`
+                      : "https://googlemaps.com"
+                  }
+                >
+                  {item.info}
+                </Link>
+              </FlexLayout>
+            ))}
           </div>
           <div className="basis-1/2">
             <Heading2 alignment="center">Send a quick email</Heading2>

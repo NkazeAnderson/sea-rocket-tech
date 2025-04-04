@@ -4,6 +4,7 @@ import Image from "./ui/Image";
 import { Heading2, Paragraph } from "./ui/Text";
 import Button from "./ui/Button";
 import { showOffCardProps } from "@/types";
+import Link from "next/link";
 
 function ShowOffCard({
   info,
@@ -33,7 +34,11 @@ function ShowOffCard({
         <Heading2>{info.title}</Heading2>
         <Paragraph>{info.description}</Paragraph>
         <div>
-          <Button>{buttonText}</Button>
+          {info.link && (
+            <Link href={info.link}>
+              <Button>{buttonText}</Button>
+            </Link>
+          )}
         </div>
       </FlexLayout>
     </FlexLayout>

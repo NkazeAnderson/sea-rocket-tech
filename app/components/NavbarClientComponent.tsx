@@ -7,6 +7,8 @@ import NavLinks from "./NavLinks";
 import { navLinks } from "@/utils/constants";
 import FlexLayout from "./ui/FlexLayout";
 import Image from "next/image";
+import Link from "next/link";
+import Button from "./ui/Button";
 
 function NavbarClientComponent({ children }: PropsWithChildren) {
   const { mobileNavIsOpen } = useContext(AppContext) as AppContextType;
@@ -22,6 +24,9 @@ function NavbarClientComponent({ children }: PropsWithChildren) {
               {navLinks.map((item) => (
                 <NavLinks key={item.text} {...item} />
               ))}
+              <Link href={"/auth/login"}>
+                <Button>Login</Button>
+              </Link>
             </FlexLayout>
             <div className="flex-grow w-full">
               <Image

@@ -8,6 +8,7 @@ import CurlyArrow from "../../../assets/curly-arrow.png";
 import Image from "next/image";
 import Button from "../../components/ui/Button";
 import PageHeader from "../../components/PageHeader";
+import Link from "next/link";
 
 type reasonT = Omit<showOffCardProps, "image">;
 
@@ -63,24 +64,66 @@ const services: showOffCardProps[] = [
     description:
       "We build beautiful, fast and responsive websites of all types. Using technologies such as wordpress, reactJs and NextJs.",
     image: "/kindpng_3348267.png",
+    link:
+      "	https://wa.me/237683403750?" +
+      new URLSearchParams({
+        text: "Hi, I am interested in building a website.",
+      }).toString(),
   },
   {
     title: "Mobile App Development",
     description:
       "We build native android and iPhone applications keeping your clients constantly engaged with your business",
     image: "/kindpng_4443906.png",
+    link:
+      "	https://wa.me/237683403750?" +
+      new URLSearchParams({
+        text: "Hi, I am interested in building a mobile app.",
+      }).toString(),
   },
   {
     title: "Cloud Based Backend Development",
     description:
       "We build backends on the cloud empowering businesses with powerful tools to run compute intensive and security compliant businesses",
     image: "/cloud.png",
+    link:
+      "	https://wa.me/237683403750?" +
+      new URLSearchParams({
+        text: "Hi, I am interested in building a cloud based application.",
+      }).toString(),
   },
   {
     title: "UI/UX Design",
     description:
       "We design websites and app which resonate your business brand. We ensure your users get a modern experience when interacting with your business.t",
     image: "/kindpng_3348267.png",
+    link:
+      "	https://wa.me/237683403750?" +
+      new URLSearchParams({
+        text: "Hi, I am interested in need of a UI Design for my app.",
+      }).toString(),
+  },
+  {
+    title: "Search Engine Optimization - SEO",
+    description:
+      "We do both onsite and offsite search engine optimization of your websites, making it ranking higher and recommended on google and other engines",
+    image: "/kindpng_3348267.png",
+    link:
+      "	https://wa.me/237683403750?" +
+      new URLSearchParams({
+        text: "Hi, I am interested in optimizing my site for search engines.",
+      }).toString(),
+  },
+  {
+    title: "Tech Consultation",
+    description:
+      "We provide you with tech insights gained after years of experience in the industry. We will provide a detailed road map to achieving success in tech.",
+    image: "/kindpng_3348267.png",
+    link:
+      "	https://wa.me/237683403750?" +
+      new URLSearchParams({
+        text: "Hi, I am in need of booking time to discuss about my project.",
+      }).toString(),
   },
 ];
 
@@ -100,7 +143,7 @@ function ServicesPage() {
             <ShowOffCard
               info={item}
               key={item.title}
-              buttonText="See Pricing"
+              buttonText="Get a quote"
               purple
               reversed
             />
@@ -119,7 +162,9 @@ function ServicesPage() {
         <section className=" py-16 flex items-center justify-center">
           <FlexLayout direction="row-always" className="items-center">
             <div className="w-[160px] relative left-[20px] lg:left-[80]">
-              <Button>Contact Us</Button>
+              <Link href={"/contact-us"}>
+                <Button>Contact Us</Button>
+              </Link>
             </div>
             <div>
               <Image

@@ -20,16 +20,16 @@ export const navLinks:NavLinkProps[] = [{
 
 export const demoReviews:reviewT[] = [
     {
-    image:"/facePicture.jpg",
-    message:"Lorem ipsum is a dummy  or placeholder text commonly used in graphic design, publishing, and web development to fill empty spaces in a layout that does not yet have  content."
+    image:"/no-pic.png",
+    message:"Sea Rocket Tech truly launched our project into orbit! We needed a complex e-commerce platform built from scratch, and their team delivered an incredible solution. Their developers were highly skilled, and their project management was impeccable."
 },
     {
-    image:"/facePicture.jpg",
-    message:"Lorem ipsum is a dummy  or placeholder text commonly used in graphic design, publishing, and web development to fill empty spaces in a layout that does not yet have  content."
+    image:"/no-pic.png",
+    message:"Sea Rocket Tech provided us with cutting-edge mobile app development that has revolutionized our customer engagement. Their team understood our vision perfectly and translated it into a user-friendly and visually stunning app."
 },
     {
-    image:"/facePicture.jpg",
-    message:"Lorem ipsum is a dummy  or placeholder text commonly used in graphic design, publishing, and web development to fill empty spaces in a layout that does not yet have  content."
+    image:"/no-pic.png",
+    message:"We partnered with Sea Rocket Tech for a website redesign, and we couldn't be happier with the outcome. Our old website was outdated and difficult to navigate. Sea Rocket Tech's design team created a modern, visually appealing website that is incredibly user-friendly."
 },
 ]
 
@@ -38,28 +38,53 @@ export const projects : showOffCardProps[] = [
     title: "ChopAsap",
     description: "A food cater mobile application which enables users to order food from store",
     image: "/chopasapProduct.png",
+    link: "https://play.google.com/store/apps/details?id=com.walexxx23.chopasap"
 },
 {
     title: "STONEFARMS",
-    description: "A food cater mobile application which enables users to order food from store",
-    image: "/chopasapProduct.png",
+    description: "A website for an NGO involved in Agriculture",
+    image: "/stone-farms-website.png",
+    link: "https://stonefarms.org/"
 },
 ]
 
-export const demoTeamMembers:TeamMemberCardT[] = [
+export const teamMembers:TeamMemberCardT[] = [
     {
-        image: "/facePicture.jpg",
+        image: "/nkaze.png",
         name: "Nkaze Anderson",
         role:"Web Developer"
     },
     {
-        image: "/facePicture.jpg",
-        name: "Nkaze Anderson",
-        role:"Web Developer"
+        image: "/mbabit.png",
+        name: "Mbabit Scotte",
+        role:"DevOps Engineer"
+    },
+    // {
+    //     image: "/facePicture.jpg",
+    //     name: "Nkaze Anderson",
+    //     role:"Web Developer"
+    // },
+]
+
+export const companyInformation: {
+    type:"email"|"address"|"phone",
+    info:string,
+    name:string
+} [] = [
+    {
+        type:"phone",
+        info:"+237683403750",
+        name:"Phone"
     },
     {
-        image: "/facePicture.jpg",
-        name: "Nkaze Anderson",
-        role:"Web Developer"
+        type:"email",
+        info:"searockettechenterprise@gmail.com",
+        name:"Email",
     },
+    {
+        type:"address",
+        info:"City Chemist, Bamenda, CMR",
+        name:"Address",
+    },
+    
 ]

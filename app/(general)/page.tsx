@@ -5,10 +5,11 @@ import Image from "../components/ui/Image";
 import { IconCardProps, TechStackProps } from "@/types";
 import IconCard from "../components/IconCard";
 import OurStackCard from "../components/OurStackCard";
-import { demoReviews, demoTeamMembers, projects } from "@/utils/constants";
+import { demoReviews, teamMembers, projects } from "@/utils/constants";
 import ShowOffCard from "../components/ShowOffCard";
 import TeamMemberCard from "../components/TeamMemberCard";
 import ReviewCard from "../components/ReviewCard";
+import Link from "next/link";
 
 const homeIconCards: IconCardProps[] = [
   {
@@ -86,7 +87,9 @@ export default function Home() {
             business online
           </Paragraph>
           <FlexLayout className=" items-center w-full">
-            <Button>View Pricing</Button>
+            <Link href={"/contact-us"}>
+              <Button>Contact us</Button>
+            </Link>
           </FlexLayout>
         </FlexLayout>
         <FlexLayout className="flex-1/2 items-center justify-center">
@@ -162,7 +165,7 @@ export default function Home() {
         className="justify-center gap-4"
       >
         {/* max 3 */}
-        {demoTeamMembers.map((item, i) => (
+        {teamMembers.map((item, i) => (
           <div key={`${item.role} - ${i}`}>
             <TeamMemberCard member={item} />
           </div>
