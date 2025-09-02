@@ -76,7 +76,7 @@ export default function Home() {
           direction="column-always"
           className="flex-1/2 gap-3 lg:gap-9"
         >
-          <Heading2 color="purple">Sea Rocket Tech</Heading2>
+          <Heading2 color="purple">Digital Brilliance Solutions</Heading2>
           <div>
             <Heading1>Make more money</Heading1>
             <Heading1>With Technology</Heading1>

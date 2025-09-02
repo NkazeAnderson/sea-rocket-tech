@@ -7,7 +7,7 @@ function PageHeader({ title }: { title: string }) {
       <div>
         <Heading1>{title}</Heading1>
         <p className="font-bold underline text-center tracking-widest">
-          Sea Rocket Tech
+          Digital Brilliance Solutions
         </p>
       </div>
     </section>

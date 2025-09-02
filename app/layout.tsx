@@ -17,7 +17,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Sea Rocket Tech",
+  title: "Digital Brilliance Solutions",
   description:
     "Software Engineering company in Cameroon. We build stunning websites and mobile apps for companies",
 };

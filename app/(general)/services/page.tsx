@@ -133,7 +133,7 @@ function ServicesPage() {
       <PageHeader title="Services" />
       <div className="px-4 lg:px-[50px]">
         <p className="text-center px-[10%] lg:px-[30%] py-12 text-base leading-9">
-          Sea Rocket Tech is a group of highly skilled and experienced
+          Digital Brilliance Solutions is a group of highly skilled and experienced
           developers helping businesses and individuals in getting and
           satisfying more clients from the sea of infinite internet users. We
           provide the following services:

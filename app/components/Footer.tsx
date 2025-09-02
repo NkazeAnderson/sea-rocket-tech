@@ -50,7 +50,7 @@ function Footer() {
             </FlexLayout>
           ))}
         </FlexLayout>
-        <small className="text-center">Sea Rocket Tech © 2025</small>
+        <small className="text-center">Digital Brilliance Solutions © 2025</small>
       </FlexLayout>
     </footer>
   );

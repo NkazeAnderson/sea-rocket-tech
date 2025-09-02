@@ -21,15 +21,15 @@ export const navLinks:NavLinkProps[] = [{
 export const demoReviews:reviewT[] = [
     {
     image:"/no-pic.png",
-    message:"Sea Rocket Tech truly launched our project into orbit! We needed a complex e-commerce platform built from scratch, and their team delivered an incredible solution. Their developers were highly skilled, and their project management was impeccable."
+    message:"Digital Brilliance Solutions truly launched our project into orbit! We needed a complex e-commerce platform built from scratch, and their team delivered an incredible solution. Their developers were highly skilled, and their project management was impeccable."
 },
     {
     image:"/no-pic.png",
-    message:"Sea Rocket Tech provided us with cutting-edge mobile app development that has revolutionized our customer engagement. Their team understood our vision perfectly and translated it into a user-friendly and visually stunning app."
+    message:"Digital Brilliance Solutions provided us with cutting-edge mobile app development that has revolutionized our customer engagement. Their team understood our vision perfectly and translated it into a user-friendly and visually stunning app."
 },
     {
     image:"/no-pic.png",
-    message:"We partnered with Sea Rocket Tech for a website redesign, and we couldn't be happier with the outcome. Our old website was outdated and difficult to navigate. Sea Rocket Tech's design team created a modern, visually appealing website that is incredibly user-friendly."
+    message:"We partnered with Digital Brilliance Solutions for a website redesign, and we couldn't be happier with the outcome. Our old website was outdated and difficult to navigate. Digital Brilliance Solutions's design team created a modern, visually appealing website that is incredibly user-friendly."
 },
 ]
 
@@ -78,7 +78,7 @@ export const companyInformation: {
     },
     {
         type:"email",
-        info:"searockettechenterprise@gmail.com",
+        info:"info@mails.digitalbrilliancesolutions.com",
         name:"Email",
     },
     {
